@@ -5,6 +5,7 @@
 struct Tensor {
     std::vector<int> shape;
     std::vector<float> data;
+    std::vector<float> gradients;
 
     // Constructor to initialize a tensor with a given shape
     // and fill it with zeros.
@@ -27,9 +28,5 @@ struct Tensor {
             if (i < data.size() - 1) std::cout << ", ";
         }
         std::cout << "]\n";
-    }
-
-    int index(const std::vector<int>& idx) const {
-        
     }
 };

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdexcept>
-#include "atomath.hpp"
+#include "tensor.hpp"
 
 static void checkSameShape(const Tensor& a, const Tensor& b) {
     if (a.shape != b.shape) {
@@ -13,6 +13,15 @@ Tensor add(const Tensor& a, const Tensor& b) {
     Tensor out(a.shape);
     for (size_t i = 0; i < a.shape.size(); i++) {
         out.data[i] = a.data[i] + b.data[i];
+    }
+    return out;
+}
+
+Tensor mul(const Tensor& a, const Tensor& b) {
+    checkSameShape(a, b);
+    Tensor out(a.shape);
+    for (size_t i = 0; i < a.shape.size(); i++) {
+        out.data[i] = a.data[i] * b.data[i];
     }
     return out;
 }
