@@ -1,6 +1,12 @@
-<img src="./src/l0.gif" style="max-width:150px !important;display: block !important; margin: 0 auto !important;"/>
+<div align="center">
+<img src="./src/l0.gif" width="150"/>
+</div>
 
-<p style="text-align: center !important;padding:10px !important;font-weight:800 !important;font-size:20px !important">Atomath</p>
+<div align="center">
+    <strong>Atomath</strong>
+</div>
+
+<br/>
 
 A personal lighting math lib.
 
